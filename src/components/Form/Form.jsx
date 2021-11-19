@@ -19,8 +19,14 @@ const StyledForm = styled.form`
   max-width: 593px;
   margin: 0 1rem;
   padding: 0 2rem;
-  background-color: ${helpers.colors.white};
+  background: ${helpers.colors.white};
+  background: linear-gradient(
+    180deg,
+    ${helpers.colors.gradient.white} 85%,
+    ${helpers.colors.gradient.gray} 100%
+  );
   border-radius: 60px;
+  box-shadow: 0px 0px 16px 10px rgba(0, 0, 0, 0.4);
 `;
 
 const StyledInput = styled.input`
