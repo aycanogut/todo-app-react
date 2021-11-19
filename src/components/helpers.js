@@ -19,6 +19,7 @@ const colors = {
   body: "#1d1d1d",
   black: "#000",
   white: "#fff",
+  green: "#97d039",
   gradient: {
     white: "#fff", // 85%
     gray: "#e3e7f1" // 100%
