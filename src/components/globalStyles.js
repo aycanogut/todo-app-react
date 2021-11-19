@@ -4,6 +4,7 @@ import helpers from "./helpers";
 
 export const GlobalStyles = createGlobalStyle`
 
+// fonts
 @font-face {
     font-family: 'Monospace Light';
     src: src('../assets/fonts/monospace-light-webfont.woff2') format('woff2'),
@@ -20,6 +21,7 @@ export const GlobalStyles = createGlobalStyle`
     font-style: normal;
 }
 
+// global styling
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
@@ -27,6 +29,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 body {
+  font-size: 62.5%;
   background-color: ${helpers.colors.body};
 }
 
@@ -40,21 +43,24 @@ ul {
   padding: 0;
 }
 
-input::placeholder {
-  font-family: 'Monospace light', sans-serif;
+input::placeholder, input {
+  font-family: 'Monospace light', sans-serif !important;
+  
 }
 
+// helper classes
 .todo {
   display:flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0.3rem 1rem;
-  font-family: 'Monospace Light', sans-serif;
+  margin-block: 0.4rem;  
+  padding: 0.3rem .4rem 0.3rem 1rem;
   color: ${helpers.colors.body};
   border: 2px solid #dddce9;
   border-radius: 32px;
-  margin-block: 0.4rem;  
+  font-family: 'Monospace Light', sans-serif;
+  font-size: 1rem;
 
   button{
     border: none;
@@ -67,9 +73,13 @@ input::placeholder {
       height: 32px;
     }
   }
+
+    @media only screen and ${helpers.device.md} {
+    font-size: 1.2rem;
+  } ;
 }
 
-
+// input ( add todo )
 .input-group {
   position: relative;
 
@@ -85,24 +95,38 @@ input::placeholder {
   border: none;
   outline: none;
   background-color: transparent;
-  padding: .6rem;
+  padding: .3rem;
+
 
   img {
     width: 32px;
     height: 32px;
   }
+
+  @media only screen and ${helpers.device.md} {
+    padding: .6rem;
+  } ;
 }
 
+// todo right side ( checkbox, delete )
 .control-group {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+
+
+  input {
+    margin: 0;
+    width: 24px; 
+    height: 24px;
+    accent-color: ${helpers.colors.green};
+    cursor: pointer;
+  }
 
   img {
     width: 32px;
     height: 32px;
-  }
+    margin: 0 0 0 .5rem;
+  } 
 }
-
 `;
