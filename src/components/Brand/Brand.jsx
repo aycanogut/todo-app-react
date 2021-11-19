@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import helpers from "../helpers";
 
-import BrandLogo from "../../assets/logo.png";
+import BrandLogo from "../../assets/images/logo.png";
 
 const StyledBrand = styled.img`
   display: flex;

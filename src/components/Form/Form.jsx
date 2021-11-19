@@ -7,9 +7,9 @@ import helpers from "../helpers";
 import Header from "../Header/Header";
 import Icon from "../Icon/Icon";
 
-import Add from "../../assets/plus.svg";
-import Check from "../../assets/check.svg";
-import Remove from "../../assets/remove.svg";
+import Add from "../../assets/images/plus.svg";
+import Check from "../../assets/images/check.svg";
+import Remove from "../../assets/images/remove.svg";
 
 // styled components
 const StyledForm = styled.form`
