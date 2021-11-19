@@ -1,9 +1,9 @@
 // breakpoints
 const size = {
-  xs: '320px',
-  sm: '465px',
-  md: '750px',
-  lg: '1200px'
+  xs: "320px",
+  sm: "465px",
+  md: "750px",
+  lg: "1200px"
 };
 
 // media queries
@@ -16,11 +16,12 @@ const device = {
 
 // color palette
 const colors = {
-  body: '#1d1d1d',
-  check: '#AAD517',
+  body: "#1d1d1d",
+  black: "#000",
+  white: "#fff",
   gradient: {
-    white: '#fff', // 85%
-    gray: '#e3e7f1' // 100%
+    white: "#fff", // 85%
+    gray: "#e3e7f1" // 100%
   }
 };
 
