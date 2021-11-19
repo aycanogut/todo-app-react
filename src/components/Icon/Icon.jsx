@@ -2,7 +2,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const StyledIcon = styled.img`
-  /* css */
+  cursor: pointer;
 `;
 
 const Icon = ({ source }) => {
