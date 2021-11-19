@@ -5,7 +5,7 @@ When the page is loaded, the app collects previous todos from localStorage.
 
 ## Screenshot
 
-![screenshot](../todo-app-react/src/assets/images/screenshot.gif)
+![screenshot](./src/assets/images/screenshot.gif)
 
 ## Installation
 
