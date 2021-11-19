@@ -4,12 +4,12 @@ import styled from "styled-components";
 
 import helpers from "../helpers";
 
-import Header from "../Header/Header";
-import Icon from "../Icon/Icon";
-
 import Add from "../../assets/images/plus.svg";
 import Check from "../../assets/images/check.svg";
 import Remove from "../../assets/images/remove.svg";
+
+import Header from "../Header/Header";
+import Icon from "../Icon/Icon";
 
 // styled components
 const StyledForm = styled.form`
@@ -42,6 +42,7 @@ const StyledInput = styled.input`
   } ;
 `;
 
+// main component
 const Form = () => {
   const [todos, setTodos] = useState([]);
   const [todo, setTodo] = useState("");
@@ -102,40 +103,38 @@ const Form = () => {
   };
 
   return (
-    <>
-      <StyledForm onSubmit={handleSubmit}>
-        <Header />
-        <div className="input-group">
-          <StyledInput
-            type="text"
-            onChange={(e) => setTodo(e.target.value)} // trim whitespace from the input
-            value={todo}
-            placeholder="Add a todo"
-            required
-          />
-          <button type="submit" className="add-button">
-            <Icon source={Add} />
-          </button>
-        </div>
-        <ul>
-          {todos.map((todo) => (
-            <li key={todo.id} className="todo">
-              {todo.text}
-              <div className="control-group">
-                <StyledInput
-                  type="checkbox"
-                  onChange={() => toggleTodo(todo.id)}
-                  checked={todo.completed}
-                />
-                <button onClick={() => deleteTodo(todo.id)}>
-                  <Icon source={Remove} />
-                </button>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </StyledForm>
-    </>
+    <StyledForm onSubmit={handleSubmit}>
+      <Header />
+      <div className="input-group">
+        <StyledInput
+          type="text"
+          onChange={(e) => setTodo(e.target.value)} // trim whitespace from the input
+          value={todo}
+          placeholder="Add a todo"
+          required
+        />
+        <button type="submit" className="add-button">
+          <Icon source={Add} />
+        </button>
+      </div>
+      <ul>
+        {todos.map((todo) => (
+          <li key={todo.id} className="todo">
+            {todo.text}
+            <div className="control-group">
+              <StyledInput
+                type="checkbox"
+                onChange={() => toggleTodo(todo.id)}
+                checked={todo.completed}
+              />
+              <button onClick={() => deleteTodo(todo.id)}>
+                <Icon source={Remove} />
+              </button>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </StyledForm>
   );
 };
 
