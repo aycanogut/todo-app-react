@@ -18,7 +18,7 @@ const StyledForm = styled.form`
   min-height: 500px;
   max-width: 593px;
   margin: 0 1rem;
-  padding: 0 2rem;
+  padding: 0 2rem 2rem 2rem;
   background: ${helpers.colors.white};
   background: linear-gradient(
     180deg,
