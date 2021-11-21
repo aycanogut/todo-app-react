@@ -6,7 +6,7 @@ const StyledIcon = styled.img`
 `;
 
 const Icon = ({ source }) => {
-  return <StyledIcon src={source} />;
+  return <StyledIcon src={source} role="button" alt="button icon" />;
 };
 
 Icon.propTypes = {

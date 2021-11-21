@@ -113,7 +113,7 @@ const Form = () => {
           placeholder="Add a todo"
           required
         />
-        <button type="submit" className="add-button">
+        <button type="submit" className="add-button" role="button">
           <Icon source={Add} />
         </button>
       </div>
