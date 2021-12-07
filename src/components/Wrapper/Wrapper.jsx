@@ -18,7 +18,7 @@ const StyledWrapper = styled.div`
 const Wrapper = () => {
   return (
     <>
-      <Brand />
+      {/* <Brand /> */}
       <StyledWrapper>
         <Form />
       </StyledWrapper>
