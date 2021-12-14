@@ -3,7 +3,7 @@ import styled from "styled-components";
 import helpers from "../helpers";
 
 import Form from "../Form/Form";
-import Brand from "../Brand/Brand";
+// import Brand from "../Brand/Brand";
 
 const StyledWrapper = styled.div`
   max-width: 590px;
